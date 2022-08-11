@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <title>EN-0x000A</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A Web Command Line Interface via NUS (Nordic UART Service) using Web Bluetooth">
+  <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link rel="shortcut icon" href="./img/favicon.png">
+
+  <link href="./css/style.css" rel="stylesheet" type='text/css'>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.min.js"></script>
+  <script src="https://unpkg.com/p5ble@0.0.4/dist/p5.ble.js"></script>
+</head>
+
+<body>
+  <div id="connection-panel">
+      <button id="clientConnectButton" type="button" class="connect btn btn-default" onclick="connectAndStartNotify()">Connect</button>
+  </div>
+  <div id="sensor-el" class="sensor-reading">
+    
+  </div>
+  <div class="clear">
+
+  </div>
+  <div id="control-panel">
+      <button type="button" class="btn btn-default magnetControllerBotton top" onclick="toggleLED()">GET DATA</button>
+      <button type="button" class="btn btn-default magnetControllerBotton bottom" onclick="saveGeo()">GET GEO</button>
+      <button type="button" class="btn btn-default magnetControllerBotton off" onclick="download_csv()">DOWNLOAD</button>
+  </div>
+  <div class="footer">
+    <p><i>EN-0x00A SENSOR NODE CONTROLLER</i></p>
+  </div>
+
+  <script type="text/javascript" src='./js/app.js'></script>
+</body>
+</html>
